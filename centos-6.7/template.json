@@ -5,7 +5,7 @@
     "iso_checksum_type": "sha256",
     "redhat_release": "6.7",
     "atlas_token": "{{env `ATLAS_TOKEN`}}",
-    "artifact_name": "wittman/centos-{{user `redhat_release`}}-ansible"
+    "artifact_name": "wittman/centos-6.7-ansible"
   },
 
   "builders": [{
@@ -55,20 +55,21 @@
     }
   }],
 
-  "post-processors": [{
-    "type": "vagrant",
-    "keep_input_artifact": false
-  },
-  {
-    "type": "atlas",
-    "token": "{{user `atlas_token`}}",
-    "artifact": "{{user `artifact_name`}}",
-    "artifact_type": "vagrant.box",
-    "metadata": {
-      "version": "0.0.1",
-      "provider": "virtualbox",
-      "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changelog\n\n#### 0.0.1\n\n- Ansible 1.9.4"
-    }
-  }]
+  "post-processors": [
+    [{
+      "type": "vagrant",
+      "keep_input_artifact": false
+    }, {
+      "type": "atlas",
+      "token": "{{user `atlas_token`}}",
+      "artifact": "{{user `artifact_name`}}",
+      "artifact_type": "vagrant.box",
+      "metadata": {
+        "version": "0.0.1",
+        "provider": "virtualbox",
+        "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changelog\n\n#### 0.0.1\n\n- Ansible 1.9.4"
+      }
+    }]
+  ]
 
 }
