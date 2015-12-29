@@ -1,16 +1,18 @@
-# Packer Templates for CentOS 6/7 with Ansible
+# Packer Templates for Vagrant
 
-These Packer templates create Vagrant boxes with a minimal installation of CentOS and Ansible pre-installed via EPEL.
+A collection of Packer templates which create Vagrant boxes for various purposes. See the build pages on Atlas below for more information.
 
 ## Builds
 
 These images are available in [Atlas](https://atlas.hashicorp.com):
 
+ - [wittman/centos-6.7](https://atlas.hashicorp.com/wittman/boxes/centos-6.7)
  - [wittman/centos-6.7-ansible](https://atlas.hashicorp.com/wittman/boxes/centos-6.7-ansible)
+ - [wittman/centos-7.2](https://atlas.hashicorp.com/wittman/boxes/centos-7.2)
  - [wittman/centos-7.2-ansible](https://atlas.hashicorp.com/wittman/boxes/centos-7.2-ansible)
 
-You can use them by declaring the following in your Vagrantfile:
+As an example, you can use the `wittman/centos-6.7` image in your Vagrantfile as follows:
 
 ``` ruby
-config.vm.box = "wittman/centos-6.7-ansible"
+config.vm.box = "wittman/centos-6.7"
 ```

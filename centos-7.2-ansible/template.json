@@ -5,12 +5,12 @@
     "iso_checksum_type": "sha256",
     "redhat_release": "7.2",
     "atlas_token": "{{env `ATLAS_TOKEN`}}",
-    "artifact_name": "wittman/centos-7.2"
+    "artifact_name": "wittman/centos-7.2-ansible"
   },
 
   "builders": [{
     "type": "virtualbox-iso",
-    "vm_name": "centos-{{user `redhat_release`}}",
+    "vm_name": "centos-{{user `redhat_release`}}-ansible",
     "boot_wait": "10s",
     "disk_size": 20480,
     "guest_os_type": "RedHat_64",
@@ -47,6 +47,7 @@
           "scripts/base.sh",
           "scripts/vagrant.sh",
           "scripts/virtualbox.sh",
+          "scripts/ansible.sh",
           "scripts/cleanup.sh",
           "scripts/zerodisk.sh"
         ]
@@ -64,9 +65,9 @@
       "artifact": "{{user `artifact_name`}}",
       "artifact_type": "vagrant.box",
       "metadata": {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "provider": "virtualbox",
-        "description": "# CentOS {{user `redhat_release`}}\n\nMinimal install of CentOS {{user `redhat_release`}} with EPEL pre-installed.\n\n## Changelog\n\n#### 0.0.1\n\n- First version"
+        "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changelog\n\n#### 0.0.2\n\n- Added git\n\n#### 0.0.1\n\n- Ansible 1.9.4"
       }
     }]
   ]
