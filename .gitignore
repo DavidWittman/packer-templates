@@ -3,3 +3,4 @@ packer_cache
 .vagrant
 .bundle
 builds/
+Vagrantfile
