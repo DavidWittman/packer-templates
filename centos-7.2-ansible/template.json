@@ -65,9 +65,9 @@
       "artifact": "{{user `artifact_name`}}",
       "artifact_type": "vagrant.box",
       "metadata": {
-        "version": "0.0.2",
+        "version": "0.0.3",
         "provider": "virtualbox",
-        "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changelog\n\n#### 0.0.2\n\n- Added git\n\n#### 0.0.1\n\n- Ansible 1.9.4"
+        "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changes in this version\n\n- Clean up build logs more thoroughly"
       }
     }]
   ]

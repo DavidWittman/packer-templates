@@ -64,9 +64,9 @@
       "artifact": "{{user `artifact_name`}}",
       "artifact_type": "vagrant.box",
       "metadata": {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "provider": "virtualbox",
-        "description": "# CentOS {{user `redhat_release`}}\n\nMinimal install of CentOS {{user `redhat_release`}} with EPEL pre-installed.\n\n## Changelog\n\n#### 0.0.1\n\n- First version"
+        "description": "# CentOS {{user `redhat_release`}}\n\nMinimal install of CentOS {{user `redhat_release`}} with EPEL pre-installed.\n\n## Changes in this version\n\n- Clean up build logs more thoroughly"
       }
     }]
   ]
