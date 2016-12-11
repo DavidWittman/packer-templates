@@ -5,7 +5,8 @@
     "iso_checksum_type": "sha256",
     "redhat_release": "7.2",
     "atlas_token": "{{env `ATLAS_TOKEN`}}",
-    "artifact_name": "wittman/centos-7.2-ansible"
+    "artifact_name": "wittman/centos-7.2-ansible",
+    "version": "0.2.0"
   },
 
   "builders": [{
@@ -65,9 +66,9 @@
       "artifact": "{{user `artifact_name`}}",
       "artifact_type": "vagrant.box",
       "metadata": {
-        "version": "0.1.0",
+        "version": "{{user `version`}}",
         "provider": "virtualbox",
-        "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changes in this version\n\n- Update packages. Ansible 2.1.1.0."
+        "description": "# CentOS {{user `redhat_release`}} with Ansible\n\nMinimal install of CentOS {{user `redhat_release`}} with Ansible installed via EPEL.\n\n## Changes in this version\n\n- Update packages. Ansible 2.2.0.0."
       }
     }]
   ]
