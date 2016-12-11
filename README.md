@@ -12,6 +12,8 @@ These images are available in [Atlas](https://atlas.hashicorp.com):
  - [wittman/centos-6.8-ansible](https://atlas.hashicorp.com/wittman/boxes/centos-6.8-ansible)
  - [wittman/centos-7.2](https://atlas.hashicorp.com/wittman/boxes/centos-7.2)
  - [wittman/centos-7.2-ansible](https://atlas.hashicorp.com/wittman/boxes/centos-7.2-ansible)
+ - [wittman/centos-7.3](https://atlas.hashicorp.com/wittman/boxes/centos-7.3)
+ - [wittman/centos-7.3-ansible](https://atlas.hashicorp.com/wittman/boxes/centos-7.3-ansible)
 
 As an example, you can use the `wittman/centos-6.7` image in your Vagrantfile as follows:
 
